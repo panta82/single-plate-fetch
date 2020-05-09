@@ -1,8 +1,9 @@
 {
   "name": "single-plate-fetch",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple fetch-like wrapper around node's HTTP/HTTPS library. Really meant to be a part of https://spb.pantas.net, something you can just copy-paste into a script file.",
+	"keywords": ["fetch", "http", "https", "get", "request", "ajax"],
+	"main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "@types/express": "^4.17.6",
