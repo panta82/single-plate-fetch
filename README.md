@@ -5,19 +5,22 @@ A simple fetch-like wrapper around node's HTTP/HTTPS library. Really meant to be
 ```javascript
 const getResult = await fetch('https://some-url.com?a=b');
 
-const postResult = await fetch(
-  'https://some-url.com', {
-    method: 'POST',
-    body: {key: 'this will become JSON'},
-    headers: {
-      authorisation: 'Bearer 123'
-    }
-  }
-);
+const postResult = await fetch('https://some-url.com', {
+  method: 'POST',
+  body: { key: 'this will become JSON' },
+  timeout: 1000, // 1 sec
+  headers: {
+    authorisation: 'Bearer 123',
+  },
+});
+
+const { statusText, statusCode, headers, data, rawData } = await fetch('https://some-url.com', {
+  responseDetails: true,
+});
 ```
 
 Raw code:
 
 ### https://raw.githubusercontent.com/panta82/single-plate-fetch/master/index.js
 
-*But you can also get it from npm I guess, I'm not the boss of you.*
+_But you can also get it from npm I guess, I'm not the boss of you._
